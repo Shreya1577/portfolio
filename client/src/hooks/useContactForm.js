@@ -7,7 +7,6 @@ const INITIAL_ERRORS = { name: '', email: '', subject: '', message: '' };
 function validate(fields) {
   const errors = { ...INITIAL_ERRORS };
   let isValid = true;
-
   if (!fields.name.trim()) {
     errors.name = 'Name is required.';
     isValid = false;
