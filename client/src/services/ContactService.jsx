@@ -6,7 +6,7 @@ const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
  * @returns {Promise<{ success: boolean, message: string }>}
  */
 export async function sendContactMessage(data) {
-  const response = await fetch(`${API_BASE}/messages`, {
+  const response = await fetch(`${API_BASE}/api/messages`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(data),
