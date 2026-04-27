@@ -1,4 +1,4 @@
-import { useContactForm } from '../hooks/UsecontactForm';
+import { useContactForm } from '../hooks/useContactForm';
 import './Contact.css';
 
 const contactInfo = [
