@@ -1,0 +1,165 @@
+.projects {
+  padding: 8rem 0 5rem;
+}
+
+.projects__header {
+  margin-bottom: 2rem;
+}
+
+.projects__filter {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 400;
+  color: var(--stone);
+  background: transparent;
+  border: 1.5px solid var(--cream-dark);
+  padding: 0.4rem 1rem;
+  border-radius: var(--radius-xl);
+  transition: var(--transition);
+  letter-spacing: 0.04em;
+  cursor: pointer;
+}
+.filter-btn:hover {
+  border-color: var(--matcha);
+  color: var(--matcha-deep);
+}
+.filter-btn--active {
+  background: var(--matcha-deep);
+  border-color: var(--matcha-deep);
+  color: var(--cream);
+}
+
+.projects__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Project Card */
+.pcard {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+  transition: var(--transition);
+  animation: fadeUp 0.5s ease both;
+  border: 1px solid var(--cream-dark);
+}
+.pcard:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+}
+
+.pcard__thumb {
+  height: 160px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 1rem 1.25rem;
+}
+
+.pcard__cat-badge {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 500;
+  color: var(--matcha-deep);
+  background: rgba(255,255,255,0.8);
+  backdrop-filter: blur(4px);
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-xl);
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.pcard__thumb-links {
+  display: flex;
+  gap: 0.5rem;
+}
+.pcard__link {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--ink);
+  background: rgba(255,255,255,0.8);
+  backdrop-filter: blur(4px);
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-xl);
+  transition: var(--transition);
+}
+.pcard__link:hover {
+  background: var(--ink);
+  color: var(--cream);
+}
+
+.pcard__body {
+  padding: 1.5rem;
+}
+
+.pcard__title {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--ink);
+  margin-bottom: 0.5rem;
+}
+
+.pcard__desc {
+  font-size: 0.875rem;
+  color: var(--stone);
+  line-height: 1.65;
+  margin-bottom: 1rem;
+}
+
+.pcard__tags {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.pcard__toggle {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--matcha-deep);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  letter-spacing: 0.04em;
+  transition: color 0.25s;
+}
+.pcard__toggle:hover { color: var(--ink); }
+
+/* Case Study */
+.pcard__case {
+  margin-top: 1.25rem;
+  border-top: 1px solid var(--cream-dark);
+  padding-top: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  animation: fadeUp 0.35s ease both;
+}
+
+.pcard__case-item { display: flex; flex-direction: column; gap: 0.2rem; }
+
+.pcard__case-label {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--matcha);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 500;
+}
+
+.pcard__case-item p {
+  font-size: 0.86rem;
+  color: var(--ink-soft);
+  line-height: 1.65;
+}

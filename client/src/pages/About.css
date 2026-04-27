@@ -1,0 +1,183 @@
+.about {
+  padding: 8rem 0 5rem;
+}
+
+/* Intro */
+.about__intro {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 4rem;
+  align-items: start;
+  margin-bottom: 6rem;
+}
+
+.about__intro-text .section-title {
+  margin-bottom: 1.5rem;
+}
+.about__intro-text .section-title em {
+  font-style: italic;
+  color: var(--matcha-deep);
+}
+
+.about__bio {
+  font-size: 1rem;
+  color: var(--ink-soft);
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+.about__bio strong { color: var(--ink); font-weight: 600; }
+
+/* Card */
+.about__intro-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  box-shadow: var(--shadow-card);
+  border: 1px solid var(--cream-dark);
+}
+
+.about__avatar-placeholder {
+  width: 80px; height: 80px;
+  border-radius: 50%;
+  background: var(--matcha-mist);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--matcha-deep);
+  margin-bottom: 1.5rem;
+  border: 2px solid var(--matcha-light);
+}
+
+.about__quick-facts { display: flex; flex-direction: column; gap: 0.8rem; }
+.about__fact {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid var(--cream-dark);
+}
+.about__fact:last-child { border-bottom: none; padding-bottom: 0; }
+
+.about__fact-label {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--stone);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+.about__fact-value {
+  font-size: 0.88rem;
+  color: var(--ink);
+  font-weight: 400;
+}
+
+/* Skills */
+.about__skills {
+  margin-bottom: 6rem;
+}
+.about__skills .section-title { margin-bottom: 2.5rem; }
+
+.skills__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.skills__group {
+  background: var(--white);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  border: 1px solid var(--cream-dark);
+}
+
+.skills__category {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--matcha-deep);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 1rem;
+}
+
+.skills__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.skills__item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+}
+.skills__bullet {
+  color: var(--matcha);
+  font-size: 0.5rem;
+  flex-shrink: 0;
+}
+
+/* Timeline */
+.about__timeline .section-title { margin-bottom: 2.5rem; }
+
+.timeline { display: flex; flex-direction: column; gap: 0; }
+
+.timeline__item {
+  display: grid;
+  grid-template-columns: 80px 40px 1fr;
+  align-items: start;
+  gap: 0;
+}
+
+.timeline__year {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: var(--matcha-deep);
+  padding-top: 0.15rem;
+  text-align: right;
+  padding-right: 1.25rem;
+}
+
+.timeline__connector {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 0.5rem;
+}
+.timeline__dot {
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  background: var(--matcha);
+  flex-shrink: 0;
+  border: 2px solid var(--parchment);
+  outline: 2px solid var(--matcha-light);
+}
+.timeline__line {
+  width: 1.5px;
+  flex: 1;
+  min-height: 48px;
+  background: var(--matcha-mist);
+  margin-top: 4px;
+}
+
+.timeline__event {
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+  line-height: 1.6;
+  padding: 0.2rem 0 2rem 1.25rem;
+}
+
+@media (max-width: 900px) {
+  .about__intro { grid-template-columns: 1fr; }
+  .skills__grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+  .skills__grid { grid-template-columns: 1fr; }
+}
