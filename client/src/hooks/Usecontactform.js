@@ -1,5 +1,5 @@
 import { useState, useCallback } from 'react';
-import { sendContactMessage } from '../services/contactService';
+import { sendContactMessage } from '../services/ContactService';
 
 const INITIAL_FORM = { name: '', email: '', subject: '', message: '' };
 const INITIAL_ERRORS = { name: '', email: '', subject: '', message: '' };
