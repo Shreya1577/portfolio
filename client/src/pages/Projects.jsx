@@ -4,15 +4,12 @@ import './Projects.css';
 const projects = [
   {
     id: 1,
-    title: 'Project Alpha',
+    title: 'Portfolio',
     category: 'Full-Stack',
-    description: 'A real-time collaborative tool built with React, Socket.io, and Node.js.',
-    problem: 'Teams needed a lightweight async board without the complexity of Trello.',
-    process: 'Designed data schema first, built Socket.io rooms, then polished the React UI.',
-    result: '50% faster standups for the beta team of 12 people.',
+    description: 'My own portfolio built with React, Socket.io, and Node.js.',
     tags: ['React', 'Node.js', 'MongoDB', 'Socket.io'],
-    github: 'https://github.com',
-    live: 'https://example.com',
+    github: 'https://github.com/Shreya1577/portfolio',
+    live: 'https://portfolio-p4eq.vercel.app/about',
     color: '#d4e6d0',
   },
   {

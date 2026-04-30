@@ -1,16 +1,16 @@
 import './About.css';
 
 const skills = {
-  Frontend: ['React', 'Vite', 'CSS / Tailwind', 'JavaScript (ES6+)', 'HTML5'],
+  Frontend: ['React', 'Vite', 'CSS', 'JavaScript (ES6+)', 'HTML5'],
   Backend:  ['Node.js', 'Express', 'REST APIs', 'MongoDB / Mongoose', 'JWT Auth'],
-  Tools:    ['Git / GitHub', 'Figma', 'Postman', 'Docker (basics)', 'Vercel / Render'],
+  Tools:    ['Git / GitHub', 'Canva', 'Vercel / Render'],
 };
 
 const timeline = [
-  { year: '2024', event: 'Built and launched 3 full-stack MERN applications' },
-  { year: '2023', event: 'Completed advanced React & Node.js coursework' },
-  { year: '2022', event: 'Started freelancing — first paid project delivered' },
-  { year: '2021', event: 'Wrote first line of JavaScript. Fell in love instantly.' },
+   { year: '2026', event: 'Building Fullstacks & Deploying them gracefully.' },
+   { year: '2026', event: 'Started learning and devloping backend projescts ' },
+   { year: '2025', event: 'Completed advanced React & focused on Graphic Designing' },
+   { year: '2025', event: 'Built simple Frontend projects ' }, 
 ];
 
 export default function About() {
@@ -23,9 +23,9 @@ export default function About() {
             <p className="section-label">About Me</p>
             <h1 className="section-title">Curious engineer.<br /><em>Careful designer.</em></h1>
             <p className="about__bio">
-              Hi, I'm <strong>Your Name</strong> — a full-stack developer based in your city.
+              Hi, I'm <strong>Shera Dey</strong> — a full-stack developer.
               I care deeply about the intersection of engineering quality and user experience.
-              When I'm not coding, I'm probably reading about systems design or brewing matcha.
+              When I'm not coding, I'm probably reading about systems design.
             </p>
             <p className="about__bio">
               I believe great software is invisible — it just works, feels right, and gets out
@@ -35,14 +35,14 @@ export default function About() {
 
           <div className="about__intro-card">
             <div className="about__avatar-placeholder">
-              <span>YN</span>
+              <span>SD</span>
             </div>
             <div className="about__quick-facts">
               {[
-                { label: 'Location',    value: 'Your City, Country' },
-                { label: 'Speciality',  value: 'MERN Stack' },
-                { label: 'Available',   value: 'Yes — freelance & full-time' },
-                { label: 'Languages',   value: 'English, Bengali' },
+                { label: 'Location',    value: 'West Bengal, India' },
+                { label: 'Speciality',  value: 'MERN Stack , Graphic Designer' },
+                { label: 'Available',   value: 'Yes — freelance & part-time' },
+                { label: 'Languages',   value: 'English, Hindi, Bengali' },
               ].map(({ label, value }) => (
                 <div key={label} className="about__fact">
                   <span className="about__fact-label">{label}</span>

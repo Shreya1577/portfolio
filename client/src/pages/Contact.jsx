@@ -2,9 +2,9 @@ import { useContactForm } from '../hooks/useContactForm';
 import './Contact.css';
 
 const contactInfo = [
-  { label: 'Email',    value: 'hello@yourname.dev',   href: 'mailto:hello@yourname.dev' },
+  { label: 'Email',    value: 'hello@yourname.dev',   href: 'mailto:shreyadey1577@gmail.com' },
   { label: 'GitHub',   value: 'github.com/Shreya1577', href: 'https://github.com/Shreya1577' },
-  { label: 'LinkedIn', value: 'linkedin.com/in/you',   href: 'https://linkedin.com' },
+  { label: 'LinkedIn', value: 'linkedin.com/in/you',   href: 'https://www.linkedin.com/in/shreya-dey-949724326' },
 ];
 
 export default function Contact() {
