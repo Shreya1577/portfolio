@@ -4,26 +4,29 @@ import './Home.css';
 const featuredProjects = [
   {
     id: 1,
-    title: 'Project Alpha',
+    title: 'Developer Portfolio Website',
     category: 'Full-Stack',
-    description: 'A real-time collaborative tool built with React, Socket.io, and Node.js.',
-    tags: ['React', 'Node.js', 'MongoDB'],
+    description: 'A modern, responsive personal portfolio website showcasing my projects, technical skills, achievements, and contact information.',
+    tags: ['React', 'Vite', 'JavaScript', 'HTML5', 'CSS3'],
+    image: '/portfolio.png',
     color: '#d4e6d0',
   },
   {
     id: 2,
-    title: 'Project Beta',
+    title: 'NextGen Dashboard',
     category: 'Frontend',
-    description: 'A pixel-perfect e-commerce UI with cart management and checkout flow.',
-    tags: ['React', 'Redux', 'CSS'],
+    description: 'A modern analytics dashboard featuring responsive layouts, interactive components, and a clean interface.',
+    tags: ['React', 'Vite', 'JavaScript', 'CSS'],
+    image: '/dashboard.png',
     color: '#e8e0d0',
   },
   {
     id: 3,
-    title: 'Project Gamma',
-    category: 'API',
-    description: 'A RESTful weather API aggregator with caching and rate limiting.',
-    tags: ['Express', 'Redis', 'REST API'],
+    title: 'Meditation Website',
+    category: 'Full-Stack',
+    description: 'A calming and responsive meditation website designed to promote mindfulness through an intuitive user interface.',
+    tags: ['HTML5', 'CSS3', 'JavaScript', 'Responsive Design'],
+    image: '/meditation.png',
     color: '#dce8dc',
   },
 ];
@@ -51,8 +54,7 @@ export default function Home() {
           </h1>
 
           <p className="hero__bio fade-up fade-up-delay-2">
-            Hi, I'm Shreya—Building clean code and calm interfaces 🍵. performant web applications with a focus on thoughtful
-            UX and solid engineering. Specialising in React, Node.js, and MongoDB.
+            Hi, I'm Shreya. I build clean code, calm interfaces 🍵, and performant web applications with a focus on thoughtful UX and solid engineering. Specialising in React, Node.js, and MongoDB.
           </p>
 
           <div className="hero__actions fade-up fade-up-delay-3">
@@ -62,9 +64,9 @@ export default function Home() {
 
           <div className="hero__stats fade-up fade-up-delay-4">
             {[
-              { num: '3+', label: 'Projects Shipped' },
-              { num: '1+',  label: 'Years Experience' },
-              { num: '1',   label: 'Tech Stack' },
+              { num: '3+', label: 'Projects' },
+              { num: 'MERN', label: 'Specialization' },
+              { num: 'AI & DSA', label: 'Learning' },
             ].map(({ num, label }) => (
               <div key={label} className="hero__stat">
                 <span className="hero__stat-num">{num}</span>
@@ -93,7 +95,13 @@ export default function Home() {
                 className="project-card"
                 style={{ '--card-bg': project.color, animationDelay: `${i * 0.1}s` }}
               >
-                <div className="project-card__thumb" style={{ background: project.color }}>
+                <div className="project-card__thumb">
+                  {project.image ? (
+                    <img src={project.image} alt={project.title} className="project-card__img" />
+                  ) : (
+                    <div className="project-card__thumb-bg" style={{ background: project.color }} />
+                  )}
+                  <div className="project-card__overlay" />
                   <span className="project-card__category">{project.category}</span>
                 </div>
                 <div className="project-card__body">

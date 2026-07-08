@@ -63,14 +63,44 @@
   align-items: flex-start;
   justify-content: space-between;
   padding: 1rem 1.25rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.pcard__img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), filter 0.4s ease;
+  z-index: 0;
+}
+
+.pcard__thumb-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.pcard__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0.15) 50%, rgba(0, 0, 0, 0) 100%);
+  z-index: 1;
+  pointer-events: none;
 }
 
 .pcard__cat-badge {
+  position: relative;
+  z-index: 2;
   font-family: var(--font-mono);
   font-size: 0.68rem;
   font-weight: 500;
   color: var(--matcha-deep);
-  background: rgba(255,255,255,0.8);
+  background: rgba(255,255,255,0.85);
   backdrop-filter: blur(4px);
   padding: 0.25rem 0.65rem;
   border-radius: var(--radius-xl);
@@ -79,6 +109,8 @@
 }
 
 .pcard__thumb-links {
+  position: relative;
+  z-index: 2;
   display: flex;
   gap: 0.5rem;
 }
@@ -86,7 +118,7 @@
   font-family: var(--font-mono);
   font-size: 0.68rem;
   color: var(--ink);
-  background: rgba(255,255,255,0.8);
+  background: rgba(255,255,255,0.85);
   backdrop-filter: blur(4px);
   padding: 0.25rem 0.65rem;
   border-radius: var(--radius-xl);
@@ -95,6 +127,10 @@
 .pcard__link:hover {
   background: var(--ink);
   color: var(--cream);
+}
+.pcard:hover .pcard__img {
+  transform: scale(1.05);
+  filter: brightness(1.08);
 }
 
 .pcard__body {

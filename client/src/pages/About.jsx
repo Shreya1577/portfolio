@@ -8,9 +8,9 @@ const skills = {
 
 const timeline = [
    { year: '2026', event: 'Building Fullstacks & Deploying them gracefully.' },
-   { year: '2026', event: 'Started learning and devloping backend projescts ' },
+   { year: '2026', event: 'Started learning and developing backend projects' },
    { year: '2025', event: 'Completed advanced React & focused on Graphic Designing' },
-   { year: '2025', event: 'Built simple Frontend projects ' }, 
+   { year: '2025', event: 'Built simple Frontend projects' }, 
 ];
 
 export default function About() {
@@ -23,7 +23,7 @@ export default function About() {
             <p className="section-label">About Me</p>
             <h1 className="section-title">Curious engineer.<br /><em>Careful designer.</em></h1>
             <p className="about__bio">
-              Hi, I'm <strong>Shera Dey</strong> — a full-stack developer.
+              Hi, I'm <strong>Shreya Dey</strong> — a full-stack developer.
               I care deeply about the intersection of engineering quality and user experience.
               When I'm not coding, I'm probably reading about systems design.
             </p>

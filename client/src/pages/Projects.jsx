@@ -4,52 +4,45 @@ import './Projects.css';
 const projects = [
   {
     id: 1,
-    title: 'Portfolio',
+    title: 'Developer Portfolio Website',
     category: 'Full-Stack',
-    description: 'My own portfolio built with React, Socket.io, and Node.js.',
-    tags: ['React', 'Node.js', 'MongoDB', 'Socket.io'],
+    description: 'A modern, responsive personal portfolio website showcasing my projects, technical skills, achievements, and contact information. Designed with a clean UI, smooth animations, and reusable React components.',
+    problem: 'I needed a professional online portfolio to present my skills, projects, and learning journey to recruiters and collaborators.',
+    process: 'Designed and developed a responsive portfolio using React and Vite, focusing on component-based architecture, reusable UI elements, and modern design principles.',
+    result: 'Built a professional portfolio that serves as my personal brand and showcases my technical growth.',
+    tags: ['React', 'Vite', 'JavaScript', 'HTML5', 'CSS3', 'Responsive Design'],
     github: 'https://github.com/Shreya1577/portfolio',
-    live: 'https://portfolio-p4eq.vercel.app/about',
+    live: 'https://portfolio-p4eq.vercel.app/',
+    image: '/portfolio.png',
     color: '#d4e6d0',
   },
   {
     id: 2,
-    title: 'Project Beta',
+    title: 'NextGen Dashboard',
     category: 'Frontend',
-    description: 'A pixel-perfect e-commerce UI with cart management and checkout flow.',
-    problem: 'Client had a working backend but a dated, conversion-killing interface.',
-    process: 'Component audit → Figma redesign → React implementation with Context API.',
-    result: 'Improved mobile conversion by 30% post-launch.',
-    tags: ['React', 'Redux', 'CSS Modules'],
-    github: 'https://github.com',
-    live: 'https://example.com',
+    description: 'A modern analytics dashboard featuring responsive layouts, interactive components, and a clean interface for displaying data and application metrics.',
+    problem: 'Build a modern dashboard interface capable of presenting data in a structured, user-friendly way.',
+    process: 'Implemented reusable React components, responsive layouts, and dashboard widgets while following modern UI/UX practices.',
+    result: 'Created a scalable dashboard template suitable for analytics, admin panels, and business applications.',
+    tags: ['React', 'Vite', 'JavaScript', 'CSS', 'Dashboard UI'],
+    github: 'https://github.com/Shreya1577/nextgen-dashboard',
+    live: 'https://nextgen-dashboard-seven.vercel.app/',
+    image: '/dashboard.png',
     color: '#e8e0d0',
   },
   {
     id: 3,
-    title: 'Project Gamma',
-    category: 'Backend',
-    description: 'A RESTful weather API aggregator with caching and rate limiting.',
-    problem: 'Multiple weather sources with inconsistent schemas made data unreliable.',
-    process: 'Built normalisation layer in Express, added Redis caching, documented with Swagger.',
-    result: 'Response time cut from 900ms to ~60ms with cache hits.',
-    tags: ['Express', 'Redis', 'REST API', 'MongoDB'],
-    github: 'https://github.com',
-    live: null,
-    color: '#dce8dc',
-  },
-  {
-    id: 4,
-    title: 'Project Delta',
+    title: 'Meditation Website',
     category: 'Full-Stack',
-    description: 'A personal finance tracker with visual analytics and bank-like UX.',
-    problem: 'Existing apps felt bloated. Wanted something calm and focused.',
-    process: 'Defined 5 core flows, kept data model simple, used Recharts for visualisation.',
-    result: 'Used personally every day — the best sign a product is working.',
-    tags: ['React', 'Node.js', 'Chart.js', 'JWT'],
-    github: 'https://github.com',
-    live: 'https://example.com',
-    color: '#e0dce8',
+    description: 'A calming and responsive meditation website designed to promote mindfulness through an intuitive user interface and relaxing visual experience.',
+    problem: 'Create an engaging meditation platform with a peaceful user experience and accessible interface.',
+    process: 'Developed responsive layouts, organized sections for meditation content, and focused on clean design with smooth navigation.',
+    result: 'Delivered a visually appealing website demonstrating responsive design and frontend development skills.',
+    tags: ['HTML5', 'CSS3', 'JavaScript', 'Responsive Design'],
+    github: 'https://github.com/Shreya1577/Meditation',
+    live: 'https://auraflow-phi.vercel.app/',
+    image: '/meditation.png',
+    color: '#dce8dc',
   },
 ];
 
@@ -92,7 +85,13 @@ export default function Projects() {
               className={`pcard ${expanded === project.id ? 'pcard--expanded' : ''}`}
               style={{ animationDelay: `${i * 0.08}s` }}
             >
-              <div className="pcard__thumb" style={{ background: project.color }}>
+              <div className="pcard__thumb">
+                {project.image ? (
+                  <img src={project.image} alt={project.title} className="pcard__img" />
+                ) : (
+                  <div className="pcard__thumb-bg" style={{ background: project.color }} />
+                )}
+                <div className="pcard__overlay" />
                 <span className="pcard__cat-badge">{project.category}</span>
                 <div className="pcard__thumb-links">
                   <a href={project.github} target="_blank" rel="noopener noreferrer" className="pcard__link">
